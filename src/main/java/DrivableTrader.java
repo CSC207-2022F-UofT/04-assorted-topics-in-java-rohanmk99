@@ -11,3 +11,22 @@
  */
 
 import java.util.List;
+public class DrivableTrader extends Trader<DrivableTrader>{
+
+    public DrivableTrader(List<DrivableTrader> inventory, List<DrivableTrader> wishlist, int money) {
+        super(inventory, wishlist, money);
+        //TODO Auto-generated constructor stub
+    }
+
+    @Override
+    public int getSellingPrice(DrivableTrader item){
+        int super_price = super.getSellingPrice(item);
+
+        if (super_price == Tradable.MISSING_PRICE) {
+            return super_price;
+        }
+
+        return super_price + ((Drivable) item).getMaxSpeed();
+    }
+
+}
