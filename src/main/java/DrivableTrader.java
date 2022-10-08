@@ -18,6 +18,11 @@ public class DrivableTrader extends Trader<DrivableTrader>{
         //TODO Auto-generated constructor stub
     }
 
+    public DrivableTrader(int money) {
+        super(money);
+        //TODO Auto-generated constructor stub
+    }
+        
     @Override
     public int getSellingPrice(DrivableTrader item){
         int super_price = super.getSellingPrice(item);
